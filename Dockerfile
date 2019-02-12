@@ -1,6 +1,6 @@
-FROM centos:7.6.1810
+FROM alpine:3.9
 
-RUN yum -y install dnsmasq
+RUN apk --update --no-cache add dnsmasq
 
 CMD ["dnsmasq" \
     ,"--no-daemon" \
